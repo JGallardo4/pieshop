@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace pieshop.Models
 {
     public class MockPieRepository : IPieRepository
     {
+        private readonly ICategoryRepository _categoryRepository = new MockCategoryRepository();
+        
         public IEnumerable<Pie> AllPies => 
             new List<Pie>
             {
@@ -20,11 +23,11 @@ namespace pieshop.Models
                 new Pie {PieId=9, Name="Edamame Pie", Price=16.25M, ShortDescription="Made with edamame beans, mozarella, and zucchini"}
             };
 
-        public IEnumerable<Pie> PiesOfTheWeek => throw new System.NotImplementedException();
+        public IEnumerable<Pie> PiesOfTheWeek { get; }
 
         public Pie GetPieById(int pieId)
         {
-            throw new System.NotImplementedException();
+            return AllPies.FirstOrDefault(p => p.PieId == pieId);
         }
     }
 }
