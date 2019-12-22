@@ -4,6 +4,6 @@ namespace pieshop.Models
 {
 	public interface ICategoryRepository
 	{
-		public IEnumerable<Category> GetAllCategories();
+		IEnumerable<Category> AllCategories { get; }
 	}
 }
