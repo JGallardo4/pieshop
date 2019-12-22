@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 namespace pieshop.Models
 {
-    public class ICategoryRepository
-    {
-        IEnumerable<Category> AllCategories { get; }
-    }
+	public interface ICategoryRepository
+	{
+		public IEnumerable<Category> GetAllCategories();
+	}
 }
