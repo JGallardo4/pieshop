@@ -1,11 +1,23 @@
 @model IEnumerable<pieshop.Models.Pie>
 
-		@foreach (var pie in Model)
-		{
-			<div>
-				<h2>@pie.Name</h2>
-				<h3>@pie.Price.ToString("c")</h3>
-				<h4>@pie.Category.CategoryName</h4>
-			</div>
-		}
-	
+@section Style {
+	<link rel="stylesheet"
+		href="/css/shared.css" />
+	<link rel="stylesheet"
+		href="/css/pages/pies.css" />
+}
+
+<div id="pie-grid">
+	@foreach (var pie in Model)
+	{
+		<div class="pie">
+			<img src=@pie.ImageUrl
+				class="pie-image"
+				alt="@pie.Name image" />
+			<h2>@pie.Name</h2>
+			<h3>@pie.Price.ToString("c")</h3>
+			<h4>@pie.Category.CategoryName</h4>
+		</div>
+	}
+</div>
+

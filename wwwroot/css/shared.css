@@ -1,0 +1,8 @@
+:root {
+	--blue: #4857CF;
+	--pink: #C876C4;
+}
+
+body {
+	background: radial-gradient(var(--blue), var(--pink));
+}

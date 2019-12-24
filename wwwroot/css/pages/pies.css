@@ -1,0 +1,17 @@
+#pie-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+	grid-gap: 2vmax;
+	align-items: center;
+}
+
+.pie {
+	background: white;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+.pie-image {
+	max-width: 100%;
+	height: auto;
+}

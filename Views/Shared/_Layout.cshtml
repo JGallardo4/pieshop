@@ -4,9 +4,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Odd Pie Shop</title>
+		<environment include="Development">
+			@RenderSection("Style", required: true)
+		</environment>
 	</head>
 	<body>
-		<header></header>
+		<header>
+			<img src="~/images/logo.png"
+				class="logo"
+				alt="Odd Pie Shop logo" />
+		</header>
 		<main>@RenderBody()</main>
 	</body>
 </html>
