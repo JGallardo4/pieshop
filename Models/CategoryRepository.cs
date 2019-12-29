@@ -11,6 +11,6 @@ namespace pieshop.Models
 			_appDbContext = appDbContext;
 		}
 
-		public IEnumerable<Category> AllCategories => _appDbContext;
+		public IEnumerable<Category> AllCategories => _appDbContext.Categories;
 	}
 }
