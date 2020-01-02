@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using pieshop.Models;
+using System;
 
 namespace pieshop
 {
@@ -22,8 +23,14 @@ namespace pieshop
 	// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 	public void ConfigureServices(IServiceCollection services)
 	{
-		services.AddDbContext<AppDbContext>(x => x
-			.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+		services.AddDbContextPool<AppDbContext>(x => x
+			.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+				mySqlOptions => 
+				{
+					mySqlOptions
+						.ServerVersion(new Version(10, 4, 11), ServerType.MariaDb);
+				})
+		);
 		services.AddScoped<IPieRepository, PieRepository>();
 		services.AddScoped<ICategoryRepository, CategoryRepository>();
 		services.AddControllersWithViews();
