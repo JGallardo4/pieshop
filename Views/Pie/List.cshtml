@@ -14,8 +14,10 @@
 			<img src=@pie.ImageUrl
 				class="pie-image"
 				alt="@pie.Name image" />
-			<h2>@pie.Name</h2>
-			<h3>@pie.Price.ToString("c")</h3>
+			<h2>
+				<a asp-controller="Pie" asp-action="Details" asp-route-id="@pie.PieId">@pie.Name</a>
+			</h2>
+			<h3 class="price">@pie.Price.ToString("c")</h3>
 			<h4>@pie.Category.CategoryName</h4>
 		</div>
 	}
