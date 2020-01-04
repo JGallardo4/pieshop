@@ -10,10 +10,15 @@
 	</head>
 	<body>
 		<header>
-			<img src="~/images/logo.png"
+		<ul id="nav" role="navigation">
+			<li><a asp-controller="Pie" asp-action="List">Pies</a></li>
+		</ul>
+		
+		<img src="~/images/logo.png"
 				class="logo"
 				alt="Odd Pie Shop logo" />
 		</header>
+		
 		<main>@RenderBody()</main>
 	</body>
 </html>

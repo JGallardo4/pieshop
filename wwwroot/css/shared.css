@@ -6,3 +6,15 @@
 body {
 	background: radial-gradient(var(--blue), var(--pink));
 }
+
+body {
+	display: grid;
+}
+
+#nav {
+	background-color: white;
+	color: darkmagenta;
+	border-radius: 15px;
+	display: grid;
+	place-items: center;
+}
