@@ -1,7 +1,7 @@
-:root {
-	--blue: #4857CF;
-	--pink: #C876C4;
-}
+@import "base/_reset.css";
+@import "base/_colors.css";
+@import "base/_hyperlinks.css";
+@import "base/_fonts.css";
 
 body {
 	background: radial-gradient(var(--blue), var(--pink));
@@ -18,3 +18,31 @@ body {
 	display: grid;
 	place-items: center;
 }
+
+/*
+ * pie-grid style
+ */
+
+ .pie-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+	grid-gap: 2vmax;
+	align-items: center;
+}
+
+.pie {
+	background: white;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+.pie-image {
+	max-width: 100%;
+	height: auto;
+}
+
+.price {
+	text-align: right;
+}
+
+/* End of pie-grid style */

@@ -1,4 +1,4 @@
-@model IEnumerable<pieshop.Models.Pie>
+@model IEnumerable<Pie>
 
 @section Style {
 	<link rel="stylesheet"
@@ -7,19 +7,10 @@
 		href="/css/pages/pies.css" />
 }
 
-<div id="pie-grid">
+<div class="pie-grid">
 	@foreach (var pie in Model)
 	{
-		<div class="pie">
-			<img src=@pie.ImageUrl
-				class="pie-image"
-				alt="@pie.Name image" />
-			<h2>
-				<a asp-controller="Pie" asp-action="Details" asp-route-id="@pie.PieId">@pie.Name</a>
-			</h2>
-			<h3 class="price">@pie.Price.ToString("c")</h3>
-			<h4>@pie.Category.CategoryName</h4>
-		</div>
+		<partial name="_PieCard" model="pie" />
 	}
 </div>
 

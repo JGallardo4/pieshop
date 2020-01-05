@@ -29,7 +29,7 @@ namespace pieshop.Models
 					CategoryId=1,
 					ImageUrl="/images/brain.jpg",
 					InStock=true,
-					IsPieOfTheWeek=true,
+					IsPieOfTheWeek=false,
 					ImageThumbnailUrl="",
 					AllergyInformation=""
 					});
@@ -68,7 +68,7 @@ namespace pieshop.Models
 						CategoryId=2,
 						ImageUrl="/images/pepino.jpg",
 						InStock=true,
-						IsPieOfTheWeek=true,
+						IsPieOfTheWeek=false,
 						ImageThumbnailUrl="",
 						AllergyInformation=""
 					});
@@ -94,7 +94,7 @@ namespace pieshop.Models
             CategoryId=2,
 						ImageUrl="/images/kiwano.jpg",
 						InStock=true,
-						IsPieOfTheWeek=true,
+						IsPieOfTheWeek=false,
 						ImageThumbnailUrl="",
 						AllergyInformation=""
 					});
@@ -120,7 +120,7 @@ namespace pieshop.Models
             CategoryId=3,
 						ImageUrl="/images/red-bean.jpg",
 						InStock=true,
-						IsPieOfTheWeek=true,
+						IsPieOfTheWeek=false,
 						ImageThumbnailUrl="",
 						AllergyInformation=""
 					});
@@ -133,7 +133,7 @@ namespace pieshop.Models
             CategoryId=3,
 						ImageUrl="/images/edamame.jpg",
 						InStock=true,
-						IsPieOfTheWeek=true,
+						IsPieOfTheWeek=false,
 						ImageThumbnailUrl="",
 						AllergyInformation=""
 					});
