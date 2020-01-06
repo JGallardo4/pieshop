@@ -8,8 +8,8 @@ using pieshop.Models;
 namespace pieshop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200103042347_SeedDataAdded")]
-    partial class SeedDataAdded
+    [Migration("20200105235832_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -106,7 +106,7 @@ namespace pieshop.Migrations
                             ImageThumbnailUrl = "",
                             ImageUrl = "/images/brain.jpg",
                             InStock = true,
-                            IsPieOfTheWeek = true,
+                            IsPieOfTheWeek = false,
                             LongDescription = "",
                             Name = "Brain Pie",
                             Price = 15.95m,
@@ -148,7 +148,7 @@ namespace pieshop.Migrations
                             ImageThumbnailUrl = "",
                             ImageUrl = "/images/pepino.jpg",
                             InStock = true,
-                            IsPieOfTheWeek = true,
+                            IsPieOfTheWeek = false,
                             LongDescription = "",
                             Name = "Pepino Pie",
                             Price = 16.75m,
@@ -176,7 +176,7 @@ namespace pieshop.Migrations
                             ImageThumbnailUrl = "",
                             ImageUrl = "/images/kiwano.jpg",
                             InStock = true,
-                            IsPieOfTheWeek = true,
+                            IsPieOfTheWeek = false,
                             LongDescription = "",
                             Name = "Kiwano Pie",
                             Price = 15.75m,
@@ -204,7 +204,7 @@ namespace pieshop.Migrations
                             ImageThumbnailUrl = "",
                             ImageUrl = "/images/red-bean.jpg",
                             InStock = true,
-                            IsPieOfTheWeek = true,
+                            IsPieOfTheWeek = false,
                             LongDescription = "",
                             Name = "Sweet Red Bean Pie",
                             Price = 14.50m,
@@ -218,7 +218,7 @@ namespace pieshop.Migrations
                             ImageThumbnailUrl = "",
                             ImageUrl = "/images/edamame.jpg",
                             InStock = true,
-                            IsPieOfTheWeek = true,
+                            IsPieOfTheWeek = false,
                             LongDescription = "",
                             Name = "Edamame Pie",
                             Price = 16.25m,
