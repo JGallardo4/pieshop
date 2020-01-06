@@ -7,10 +7,6 @@ body {
 	background: radial-gradient(var(--blue), var(--pink));
 }
 
-body {
-	display: grid;
-}
-
 #nav {
 	background-color: white;
 	color: darkmagenta;
@@ -19,13 +15,41 @@ body {
 	place-items: center;
 }
 
-/*
- * pie-grid style
- */
-
- .pie-grid {
+/* layout */
+main {
+	padding: 20px;
+	margin: 0;
+	width: auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+	grid-template-columns: 20vw auto;
+	grid-template-rows: auto 10vh auto;
+	place-items: center;
+}
+
+#logo {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.pie-grid {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 3;
+}
+
+#page-title {
+	padding: 20px 0;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row: 2;
+	place-items: center;
+}
+
+/* pie-grid style */
+ .pie-grid {
+	width: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
 	grid-gap: 2vmax;
 	align-items: center;
 }
@@ -44,5 +68,4 @@ body {
 .price {
 	text-align: right;
 }
-
 /* End of pie-grid style */

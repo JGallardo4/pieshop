@@ -9,17 +9,21 @@
 		</environment>
 	</head>
 	<body>
-		<header>
-		<ul id="nav" role="navigation">
-			<li><a asp-controller="Home" asp-action="Index">Home</a></li>
-			<li><a asp-controller="Pie" asp-action="List">Pies</a></li>
-		</ul>
 		
-		<img src="~/images/logo.png"
-				class="logo"
-				alt="Odd Pie Shop logo" />
+
+		<header>
+			<ul id="nav" role="navigation">
+				<li><a asp-controller="Home" asp-action="Index">Home</a></li>
+				<li><a asp-controller="Pie" asp-action="List">Pies</a></li>
+			</ul>
 		</header>
 		
-		<main>@RenderBody()</main>
+		<main>
+			<img src="~/images/logo.png"
+			id="logo"
+			alt="Odd Pie Shop logo" />
+			
+			@RenderBody()
+		</main>
 	</body>
 </html>
