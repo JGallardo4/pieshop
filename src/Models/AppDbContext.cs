@@ -11,6 +11,7 @@ namespace pieshop.Models
 
 				public DbSet<Pie> Pies { get; set; }
 				public DbSet<Category> Categories { get; set; }
+				public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
 				protected override void OnModelCreating(ModelBuilder modelBuilder)
 				{

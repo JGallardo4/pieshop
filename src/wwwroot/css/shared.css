@@ -8,11 +8,16 @@ body {
 }
 
 #nav {
+	height: 10vh;
 	background-color: white;
 	color: darkmagenta;
-	border-radius: 15px;
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center
+}
+
+#nav > li {
+	width: 30%;
+	align-self: center;
 }
 
 /* layout */
