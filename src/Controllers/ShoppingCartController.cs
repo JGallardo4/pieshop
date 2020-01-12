@@ -23,7 +23,7 @@ namespace src.Controllers
 			var shoppingCartViewModel = new ShoppingCartViewModel
 			{
 				ShoppingCart = _shoppingCart,
-				shoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+				ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
 			};
 
 			return View(shoppingCartViewModel);

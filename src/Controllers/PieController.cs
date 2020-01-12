@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using pieshop.Models;
 
@@ -14,9 +16,30 @@ namespace pieshop.Controllers
 				_categoryRepository = categoryRepository;
 			}
 
-			public ViewResult List()
+			public ViewResult List(string category)
 			{
-				return View(_pieRepository.AllPies);
+				IEnumerable<Pie> pies;
+				string currentCategory;
+
+				if(string.IsNullOrEmpty(category))
+				{
+					pies = _pieRepository.AllPies.OrderBy(p => p.PieId);
+					currentCategory = "All Pies";
+				}
+				else
+				{
+					pies = _pieRepository.AllPies.Where(p => p.Category.CategoryName == category)
+						.OrderBy(p => p.PieId);
+					currentCategory = category;
+				}
+
+				return View(
+					new PieListViewModel
+					{
+						Pies = pies,
+						CurrentCategory = currentCategory
+					}
+				);
 			}
 
 			public IActionResult Details(int id)

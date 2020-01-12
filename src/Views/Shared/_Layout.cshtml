@@ -3,17 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<title>Odd Pie Shop</title>
 
 		<environment include="Development">
 			@RenderSection("Style", required: true)
 		</environment>
+
+		<script src="https://kit.fontawesome.com/df3d0cc377.js"
+			crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
 			<ul id="nav" role="navigation">
-				<li><a asp-controller="Home" asp-action="Index">Home</a></li>
-				<li><a asp-controller="Pie" asp-action="List">Pies</a></li>
+				<li><a asp-controller="Home" asp-action="Index">Home</a></li>				
+				@await Component.InvokeAsync("CategoryMenu")
+				@await Component.InvokeAsync("ShoppingCartSummary")
 			</ul>
 		</header>
 		<main>
