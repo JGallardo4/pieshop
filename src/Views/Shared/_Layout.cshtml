@@ -1,27 +1,30 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Odd Pie Shop</title>
+
 		<environment include="Development">
 			@RenderSection("Style", required: true)
 		</environment>
 	</head>
 	<body>
-		
-
 		<header>
 			<ul id="nav" role="navigation">
 				<li><a asp-controller="Home" asp-action="Index">Home</a></li>
 				<li><a asp-controller="Pie" asp-action="List">Pies</a></li>
 			</ul>
 		</header>
-		
 		<main>
-			<img src="~/images/logo.png"
-			id="logo"
-			alt="Odd Pie Shop logo" />
+			<a asp-controller="Home" asp-action="Index" class="logo" id="logo-container">
+				<div class="logo">
+					<img src="~/images/logo.svg"
+						class="logo"
+						id="logo-container__img"
+						alt="Odd Pie Shop logo" />
+				</div>
+			</a><!-- End of logo -->
 			
 			@RenderBody()
 		</main>

@@ -5,8 +5,20 @@
 		class="pie-image"
 		alt="@Model.Name image" />
 	<h2>
-		<a asp-controller="Pie" asp-action="Details" asp-route-id="@Model.PieId">@Model.Name</a>
+		<a class="pie-name"
+			asp-controller="Pie"
+			asp-action="Details"	
+			asp-route-id="@Model.PieId">
+			@Model.Name
+		</a>
 	</h2>
-	<h3 class="price">@Model.Price.ToString("c")</h3>
-	<h4>@Model.Category.CategoryName</h4>
+	<h2 class="price">@Model.Price.ToString("c")</h2>
+	<h2>@Model.Category.CategoryName</h2>
+	<p>@Model.ShortDescription</p>
+	<a class="addToCartBtn"
+		asp-controller="ShoppingCart"
+		asp-action="AddToShoppingCart"
+		asp-route-pieId="@Model.PieId">
+		Add to cart
+	</a>
 </div>

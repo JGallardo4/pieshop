@@ -7,12 +7,20 @@ body {
 	background: radial-gradient(var(--blue), var(--pink));
 }
 
+p {
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* navbar */
 #nav {
 	height: 10vh;
 	background-color: white;
+	opacity: 0.8;
 	color: darkmagenta;
+	font-family: 'BioRhyme', serif;
 	display: flex;
-	justify-content: center
+	justify-content: center;
+	text-align: center;
 }
 
 #nav > li {
@@ -31,11 +39,6 @@ main {
 	place-items: center;
 }
 
-#logo {
-	grid-column: 1;
-	grid-row: 1;
-}
-
 .pie-grid {
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -50,6 +53,20 @@ main {
 	place-items: center;
 }
 
+#logo-container {
+	height: 100%;
+	width: 100%;
+	grid-column: 1;
+	grid-row: 1;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	place-items: center;
+}
+
+.logo {
+	width: 25vmax;
+}
 /* pie-grid style */
  .pie-grid {
 	width: auto;
@@ -73,4 +90,9 @@ main {
 .price {
 	text-align: right;
 }
+
+.pie-name {
+	font-family: 'BioRhyme', serif;
+}
+
 /* End of pie-grid style */

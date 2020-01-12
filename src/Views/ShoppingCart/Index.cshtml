@@ -1,0 +1,43 @@
+@model ShoppingCartViewModel
+
+@section Style {
+	<link rel="stylesheet"
+		href="/css/shared.css" />
+  <link rel="stylesheet"
+    href="/css/pages/shopping-cart.css" />
+}
+
+<h2>Your shopping cart</h2>
+<h2>Here are the delicious pies in your shopping cart.</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th>Selected Amount</th>
+			<th>Pie</th>
+			<th>Price</th>
+			<th>Subtotal</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+		{
+			<tr>
+				<td>@line.Amount</td>
+				<td>@line.Pie.Name</td>
+				<td>@line.Pie.Price.ToString("c")</td>
+				<td>
+					@((line.Amount * line.Pie.Price).ToString("c")))
+				</td>
+			</tr>
+		}
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Total:</td>
+			<td>
+				@Model.shoppingCartTotal.ToString("c")
+			</td>
+		</tr>
+	</tfoot>
+</table>

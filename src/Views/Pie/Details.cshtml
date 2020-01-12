@@ -7,15 +7,27 @@
 		href="/css/pages/pie-details.css" />
 }
 
-<h2>@Model.Name</h2>
 
-<div class="thumbnail">
-	<img alt="@Model.Name" src="@Model.ImageUrl">
-	<div class="caption-full">
-		<h3>
-			<a asp-controller="Pie" asp-action="Details" asp-route-id="pie.PieId">@Model.Name</a>
-		</h3>
-		<h4>@Model.ShortDescription</h4>
-		<p>@Model.LongDescription</p>
-	</div>
+
+<div class="pie">
+	<img alt="@Model.Name" src="@Model.ImageUrl" />
+
+	<h2 class="pie-name">
+		<a asp-controller="Pie"
+			asp-action="Details"
+			asp-route-id="pie.PieId">
+			@Model.Name
+		</a>
+	</h2>
+
+	<h2>@Model.ShortDescription</h2>
+
+	<p>@Model.LongDescription</p>
+
+	<a class="addToCartBtn"
+		asp-controller="ShoppingCart"
+		asp-action="AddToShoppingCart"
+		asp-route-pieId="@Model.PieId">
+		Add to cart
+	</a>
 </div>
