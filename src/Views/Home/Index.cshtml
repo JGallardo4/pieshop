@@ -7,18 +7,18 @@
     href="/css/pages/home.css" />
 }
 
-<div id="splash">
-<partial name="_Carousel" />
-</div>
+<main>
+	<partial name="_Carousel" />
 
-<div id="page-title">
-	<h2>Pies of the Week</h2>
-	<h4>Our weekly selection just for you!</h4>
-</div>
+	<div class="page-title">
+		<h2>Pies of the Week</h2>
+		<h4>Our weekly selection just for you!</h4>
+	</div>
 
-<div class="pie-grid">
-	@foreach(var pie in Model.PiesOfTheWeek)
-	{
-		<partial name="_PieCard" model="pie" />
-	}
-</div>
+	<div class="pie-grid">
+		@foreach(var pie in Model.PiesOfTheWeek)
+		{
+			<partial name="_PieCard" model="pie" />
+		}
+	</div>
+</main>
