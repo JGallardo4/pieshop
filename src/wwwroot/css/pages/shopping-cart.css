@@ -1,0 +1,44 @@
+/* Layout */
+main {
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+}
+
+.page-title {
+	grid-row: 1;
+}
+
+.shopping-cart-list {
+	grid-row: 2;
+}
+
+.total {
+	grid-row: 3;
+}
+/* End layout */
+
+/* shopping-cart-list style */
+.shopping-cart-list {
+	padding: 20px;
+	width: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+	grid-gap: 2vmax;
+	align-items: center;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.shopping-cart-item {
+	background: white;
+	padding: 20px;
+	border-radius: 15px;
+}
+/* End of shopping-cart-list style */
+
+.total {
+	padding: 20px 0;
+	text-align: center;
+	color: white;
+	font-family: 'BioRhyme', serif;
+	font-size: 2rem;
+}

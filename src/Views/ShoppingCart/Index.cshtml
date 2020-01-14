@@ -7,37 +7,30 @@
     href="/css/pages/shopping-cart.css" />
 }
 
-<h2>Your shopping cart</h2>
-<h2>Here are the delicious pies in your shopping cart.</h2>
+<main>
+	<div class="page-title">
+		<h2>Your shopping cart</h2>
+		<h2>Here are the delicious pies in your shopping cart.</h2>
+	</div>
 
-<table>
-	<thead>
-		<tr>
-			<th>Selected Amount</th>
-			<th>Pie</th>
-			<th>Price</th>
-			<th>Subtotal</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+	<div class="shopping-cart-list">
+		@foreach (var item in Model.ShoppingCart.ShoppingCartItems)
 		{
-			<tr>
-				<td>@line.Amount</td>
-				<td>@line.Pie.Name</td>
-				<td>@line.Pie.Price.ToString("c")</td>
-				<td>
-					@((line.Amount * line.Pie.Price).ToString("c")))
-				</td>
-			</tr>
+			<div class="shopping-cart-item">
+				<h2>#: @item.Amount</h2>
+				<h2>@item.Pie.Name</h2>
+				<h2>Price: @item.Pie.Price.ToString("c")</h2>
+				<h2>
+					Subtotal: @((item.Amount * item.Pie.Price).ToString("c"))
+				</h2>
+			</div>
 		}
-	</tbody>
-	<tfoot>
-		<tr>
-			<td>Total:</td>
-			<td>
-				@Model.ShoppingCartTotal.ToString("c")
-			</td>
-		</tr>
-	</tfoot>
-</table>
+	</div>
+
+	<div class="total">
+		<h2>Total:</h2>
+		<h2>
+			@Model.ShoppingCartTotal.ToString("c")
+		</h2>
+	</div>
+</main>
