@@ -27,7 +27,8 @@
 			<ul id="nav" role="navigation">
 				<li class="nav__item"><a asp-controller="Home" asp-action="Index">Home</a></li>				
 				@await Component.InvokeAsync("CategoryMenu")
-				@await Component.InvokeAsync("ShoppingCartSummary")
+				<li class="nav__item"><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+				@await Component.InvokeAsync("ShoppingCartSummary")				
 			</ul>
 		</header>		
 		@RenderBody()

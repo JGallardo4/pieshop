@@ -5,9 +5,9 @@
 	<li class="nav__item">
 		<a asp-controller="ShoppingCart" asp-action="Index">
 			<i class="fas fa-shopping-cart"></i>
-			<h2>
+			<span>
 				@Model.ShoppingCart.ShoppingCartItems.Count()
-			</h2>
+			</span>
 		</a>
 	</li>
 }
