@@ -28,12 +28,14 @@
 				<li class="nav__item"><a asp-controller="Home" asp-action="Index">Home</a></li>				
 				@await Component.InvokeAsync("CategoryMenu")
 				<li class="nav__item"><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+				<partial name="_LoginPartial" />
 				@await Component.InvokeAsync("ShoppingCartSummary")				
 			</ul>
 		</header>	
 
 		<main>
 			@RenderBody()
-		</main>	
+		</main>
+		@RenderSection("Scripts", required: false)
 	</body>
 </html>
