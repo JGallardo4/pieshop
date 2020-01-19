@@ -9,28 +9,40 @@
 		<environment include="Development">
 			@RenderSection("Style", required: true)
 		</environment>
+		
+		<link rel="icon" type="image/svg+xml" href="~/images/favicon.svg">
 
 		<script src="https://kit.fontawesome.com/df3d0cc377.js"
 			crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
-			<a asp-controller="Home" asp-action="Index" class="logo" id="logo-container">
-				<div class="logo">
-					<img src="~/images/logo.svg"
-						class="logo"
-						id="logo-container__img"
-						alt="Odd Pie Shop logo" />
-				</div>
+			<a asp-controller="Home" asp-action="Index" class="logo"
+			id="logo-container">
+				<img src="~/images/logo.svg"
+					id="logo"
+					alt="Odd Pie Shop logo" />
 			</a><!-- End of logo -->
 			
-			<ul id="nav" role="navigation">
-				<li class="nav__item"><a asp-controller="Home" asp-action="Index">Home</a></li>				
+			<ul id="nav" class="header-menu" role="navigation">
+				<li class="nav__item">
+					<a asp-controller="Home" asp-action="Index">
+						Home
+					</a>
+				</li>
+
 				@await Component.InvokeAsync("CategoryMenu")
-				<li class="nav__item"><a asp-controller="Contact" asp-action="Index">Contact</a></li>
-				<partial name="_LoginPartial" />
+
+				<li class="nav__item">
+					<a asp-controller="Contact" asp-action="Index">
+						Contact
+					</a>
+				</li>		
+
 				@await Component.InvokeAsync("ShoppingCartSummary")				
 			</ul>
+
+			<partial name="_LoginPartial" />
 		</header>	
 
 		<main>

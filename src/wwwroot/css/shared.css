@@ -12,17 +12,20 @@ p {
 	font-family: 'Alegreya Sans', sans-serif;
 }
 
-#nav,
-#nav ul {
+.header-menu {
 	background-color: white;
 	color: darkmagenta;
 	font-family: 'BioRhyme', serif;	
 }
 
-#nav a:focus,
-#nav a:focus-within,
-#nav a:hover {
-	background: var(--purple);
+#nav li ul a {
+	background-color: white;
+}
+
+.header-menu a:focus,
+.header-menu a:focus-within,
+.header-menu a:hover {
+	background: var(--purple) !important;
 	color: white;
 }
 
@@ -36,38 +39,62 @@ p {
 
 /* Layout */
 header {
-	display: grid;
-	grid-template-columns: min-content 1fr minmax(min-content, 60vw);
+	padding: 2rem;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 #nav {
-	grid-column: 3;
-	align-self: start;
-	height: min-content;
-	padding: 0;
-	border-bottom-left-radius: 10px;
+	height: 80px;
+	width: 40vw;
+	border-radius: 10px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	text-align: center;
 }
 
-#nav a {
+#login {
+	display: flex;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	height: 80px;
+}
+
+#login form {
+	padding-left: 2rem;
+	display: inline-block;
+}
+
+#nav li {
 	display: block;
-	padding: 20px;
+	height: 100%;
+}
+
+.header-menu a {
+	height: auto;
+	display: block;
+	padding: 2rem;
+}
+
+button {	
+	cursor: pointer;
 }
 
 #logo-container {
-	padding: 1vw;
-	grid-column: 1;
-	grid-row: 1;
-	display: grid;
-	place-items: center;
-	width: 20vh;
+	width: 12rem;
+	height: auto;
 }
 
-.logo {
-	width: inherit;
+#logo {
+	width: 100%;
+	height: auto;
 }
 /* End of layout */
 
