@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <svg 
 width="105.7mm"
 height="105.7mm"
@@ -10,16 +11,18 @@ xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<metadata>
 		<rdf:RDF>
-		<cc:Work rdf:about="">
-			<dc:format>image/svg+xml</dc:format>
-			<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-			<dc:title/>
-		</cc:Work>
+			<cc:Work rdf:about="">
+				<dc:format>image/svg+xml</dc:format>
+
+				<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+
+				<dc:title/>
+			</cc:Work>		
 		</rdf:RDF>
 	</metadata>
 
 	<g transform="translate(8387.5 -80.517)">
-		<circle cx="-8334.6" cy="133.37" r="52.726" fill="#393f74" fill-opacity=".98611"/>
+		<circle cx="-8334.6" cy="133.37" r="52.726" fill="#393f74" fill-opacity=".98611" />
 		<g fill="#e08cdc">
 			<g transform="matrix(3.2203 0 0 3.2203 18937 -117.29)">
 				<path d="m-8478 74.983q-0.9419 0-1.7039-0.42333-0.7515-0.42333-1.196-1.2382-0.4445-0.8255-0.4445-1.9685 0-1.6087 0.5821-2.8363 0.5927-1.2277 1.5981-1.8944 1.016-0.66675 2.2437-0.66675 0.9419 0 1.6933 0.42333 0.762 0.42333 1.2065 1.2488 0.4445 0.81492 0.4445 1.9579 0 1.6087-0.5927 2.8363-0.582 1.2277-1.598 1.8944-1.0055 0.66675-2.2331 0.66675zm0.1058-1.2488q0.8255 0 1.4499-0.508 0.635-0.508 0.9737-1.4076 0.3387-0.91017 0.3387-2.0532 0-1.2594-0.5292-1.905-0.5292-0.65617-1.3653-0.65617-0.8149 0-1.4393 0.508-0.6244 0.49742-0.9737 1.4076-0.3492 0.89958-0.3492 2.0532 0 1.2594 0.5292 1.9156 0.5291 0.64558 1.3652 0.64558z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
